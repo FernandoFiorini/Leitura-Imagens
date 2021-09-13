@@ -5,6 +5,14 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'leitura-imagem',
+    loadChildren: () => import('./leitura-imagem/leitura-imagem/leitura-imagem.module').then( m => m.LeituraImagemPageModule)
+  },
+  {
+    path: 'tabela-nutricional',
+    loadChildren: () => import('./tabela-nutricional/tabela-nutricional.module').then( m => m.TabelaNutricionalPageModule)
   }
 ];
 @NgModule({

@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides>
+    <ion-slide *ngFor="let legume of jsonLegume">
+      <div class="tabela-produto">Tabela nutricional {{legume.nomeLegume}}</div>
+      <div class="table-content">
+        <div class="quantidade-porcao">Quantidade por porção</div>
+        <div class="valor-diario-tabela">% VD*</div>
+        <table border="1">
+          <tr>
+            <td>Valor energético</td>
+            <td>{{legume.valorEnergetico}}kcal</td>
+            <td class="valor-diario">1</td>
+          </tr>
+
+          <tr>
+            <td>Carboidratos</td>
+            <td>{{legume.carboidrato}}g</td>
+            <td class="valor-diario">1</td>
+          </tr>
+
+          <tr>
+            <td>Proteínas</td>
+            <td>{{legume.proteina}}g</td>
+            <td class="valor-diario">1</td>
+          </tr>
+
+          <tr>
+            <td>Gorduras totais</td>
+            <td>{{legume.gorduraTotal}}g</td>
+            <td class="valor-diario">1</td>
+          </tr>
+
+          <tr>
+            <td>Gorduras saturadas</td>
+            <td>{{legume.gorduraSaturada}}g</td>
+            <td class="valor-diario">1</td>
+          </tr>
+
+          <tr>
+            <td>Gorduras trans</td>
+            <td>{{legume.gorduraTrans}}</td>
+            <td class="valor-diario">1</td>
+          </tr>
+
+          <tr>
+            <td>Fibra alimentar</td>
+            <td>{{legume.fibraAlimentar}}g</td>
+            <td class="valor-diario">1</td>
+          </tr>
+
+          <tr>
+            <td>Sódio</td>
+            <td>{{legume.sodio}}mg</td>
+            <td class="valor-diario">1</td>
+          </tr>
+        </table>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
